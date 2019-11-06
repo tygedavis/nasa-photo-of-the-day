@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     axios.get('https://api.nasa.gov/planetary/apod?api_key=pDlfBcC5P5gf9EgXHQoRJydWMxdMxvHzpDnaBtKi')
     .then(res => {
-        console.log(res.data)
+        console.log(res.data.explanation)
         setData(res.data)
     })
     .catch(err => {
@@ -21,9 +21,7 @@ function App() {
     return (
       <div className="App">
         <Heading/>
-        <div className='image-div'>
-          <Image key={data} url={data.hdurl}/>
-        </div>
+        <Image key={data} title={data.title} url={data.hdurl} explanation={data.explanation}/>
       </div>
     );
 }
