@@ -14,7 +14,9 @@ const ImageDiv = styled.div`
 `;
 
 const SpaceImage = styled.img`
+    padding: 2px;
     width: 100%;
+    border 2px solid black;
 `;
 
 const ImageH4 = styled.h4`
