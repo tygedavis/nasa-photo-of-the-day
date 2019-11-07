@@ -13,14 +13,16 @@ const ImageDiv = styled.div`
     margin: 0 auto;
 `;
 
-const ImageH4 = styled.h4`
+const SpaceImage = styled.img`
+    width: 100%;
+`;
 
+const ImageH4 = styled.h4`
     font-size: 25px;
     margin: 5px 0;
 `;
 
 const AboutP = styled.p`
-
     font-size: 20px;
 `;
 
@@ -28,8 +30,9 @@ function Image(props) {
  return(
      <ImageDiv>
         <h3>The Title of this Image: {props.title}</h3>
-        <img className='space-image' alt='Space' src={props.url}/>
+        <SpaceImage alt='Space' src={props.url} />
         <ImageH4>About this Image:</ImageH4>
+        <p>Taken: {props.date}</p>
         <AboutP>{props.explanation}</AboutP>
     </ImageDiv>
  )
